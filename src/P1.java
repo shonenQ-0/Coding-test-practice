@@ -15,8 +15,11 @@ public class P1 {
         s = s.toLowerCase();
         c = Character.toLowerCase(c);
         int count = 0;
-        for (int i = 0; i < s.length(); i++) {
-            if (s.charAt(i) == c) count++;
+//        for (int i = 0; i < s.length(); i++) {
+//            if (s.charAt(i) == c) count++;
+//        }
+        for (char x : s.toCharArray()){
+            if (x == c) count ++;
         }
         return count;
     }

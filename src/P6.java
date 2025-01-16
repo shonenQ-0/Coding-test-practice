@@ -14,14 +14,20 @@ public class P6 {
     }
 
     private static String solution(String input) {
-        String result = "";
-        HashSet<Character> set = new LinkedHashSet<>();
-        for (char c : input.toCharArray()){
-            set.add(c);
+//        String result = "";
+//        HashSet<Character> set = new LinkedHashSet<>();
+//        for (char c : input.toCharArray()){
+//            set.add(c);
+//        }
+//        for (char x : set){
+//            result += x;
+//        }
+//        return result;
+        String answer = "";
+        for (int i = 0; i < input.length(); i++) {
+            if (input.indexOf(input.charAt(i)) == i) answer += input.charAt(i);
         }
-        for (char x : set){
-            result += x;
-        }
-        return result;
+        return answer;
+
     }
 }

@@ -9,8 +9,15 @@ public class P9 {
         System.out.println(solution(s));
     }
 
+//    private static int solution(String s) {
+//        s = s.toLowerCase().replaceAll("[a-z]","");
+//        return Integer.parseInt(s);
+//    }
     private static int solution(String s) {
-        s = s.toLowerCase().replaceAll("[a-z]","");
-        return Integer.parseInt(s);
+        String answer = "";
+        for (char c : s.toCharArray()) {
+            if (Character.isDigit(c)) answer += c;
+        }
+        return Integer.parseInt(answer);
     }
 }

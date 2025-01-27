@@ -18,12 +18,19 @@ public class P0202 {
 
     }
     private static void solve(ArrayList<Integer> list) {
-        int tmp = 0; //// 입력에 음수가 없기 때문에 0으로 초기화 해도 될 듯
-        int count = 0;
-        for (int i : list) {
-            if (i > tmp) {
+//        int tmp = 0; //// 입력에 음수가 없기 때문에 0으로 초기화 해도 될 듯
+//        int count = 0;
+//        for (int i : list) {
+//            if (i > tmp) {
+//                count++;
+//                tmp = i;
+//            }
+//        }
+        int tmp = list.get(0), count = 1;
+        for (int i = 1; i < list.size(); i++) {
+            if (list.get(i) > tmp) {
                 count++;
-                tmp = i;
+                tmp = list.get(i);
             }
         }
         System.out.println(count);
